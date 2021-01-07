@@ -87,3 +87,11 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Do not commit data on Github (for reasons of space and/or privacy) if 
+# it's stored within raw, external, interim and processed.
+# data/aux can be tracked since it's auxiliary info and can be manually added
+/data/raw/
+/data/external/
+/data/interim/
+/data/processed/
