@@ -1,0 +1,31 @@
+#!/bin/ipython
+# Note: ipy file suffix neccessary for running with %run magic
+
+# Import our repo as a module
+import src %{{ cookiecutter.repo_name }}
+
+## Plotting
+try:
+  %matplotlib inline
+except:
+  print("Matplotlib inline backend did not work.")
+
+## Reload changed code
+load_ext autoreload
+autoreload 2
+
+## Import basic packages
+try:
+	import numpy as np
+	import scipy as sp
+	import pandas as pd
+	import matplotlib.pyplot as plt
+except:
+	print('At least one basic package (numpy, scipy, pandas and matplotlib) is not installed.')
+
+## Paths
+# project directory
+project_dir = {{ cookiecutter.repo_name }}.project_dir
+data_path = f'{project_dir}/data'
+
+## Import this preamble in all jupyter notebooks by adding %run ./notebook_preamble.ipy
