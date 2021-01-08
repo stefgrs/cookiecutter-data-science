@@ -2,11 +2,7 @@
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
 
-Forked from http://drivendata.github.io/cookiecutter-data-science/
-
-
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
-
+Forked from http://drivendata.github.io/cookiecutter-data-science/.
 
 ### Requirements to use the cookiecutter template:
 -----------
@@ -30,6 +26,8 @@ $ conda install cookiecutter
 
     cookiecutter https://github.com/stefgrs/cookiecutter-data-science
 
+
+Then set up name, author, description, ...
 
 
 ### The resulting directory structure
@@ -85,7 +83,7 @@ The directory structure of your new project looks like this:
 
 ## Contributing
 
-The original project from Drivendata accepts contributions [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
+The original project from Drivendata accepts contributions ([see the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).)
 
 ### Installing development requirements
 ------------
