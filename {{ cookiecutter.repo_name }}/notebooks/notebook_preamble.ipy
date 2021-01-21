@@ -2,7 +2,7 @@
 # Note: ipy file suffix neccessary for running with %run magic
 
 # Import our repo as a module
-import src #{{ cookiecutter.repo_name }}
+import {{ cookiecutter.repo_name }}
 
 ## Plotting
 try:
