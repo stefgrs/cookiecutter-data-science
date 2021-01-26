@@ -27,8 +27,15 @@ $ conda install cookiecutter
     cookiecutter https://github.com/stefgrs/cookiecutter-data-science
 
 
-Then set up name, author, description, ...
+Then set up name, author, description, etc. 
 
+To import the source code into all necessary scripts, the root folder needs to be installed as a python package in editable state.
+To do this, navigate to the root folder (where the setup.py script is) and type:
+``` bash
+$ pip install -e .
+```
+
+For an example reference, see this [stack overflow page](https://stackoverflow.com/questions/6323860/sibling-package-imports/50193944#50193944).
 
 ### The resulting directory structure
 ------------
@@ -61,24 +68,24 @@ The directory structure of your new project looks like this:
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
+├── {{cookiecutter.repo_name}}  <- Source code for use in this project.
+│   ├── __init__.py    			<- Makes {{cookiecutter.repo_name}} a Python module
 │   │
-│   ├── data           <- Scripts to download or generate data
+│   ├── data           			<- Scripts to download or generate data
 │   │   └── make_dataset.py
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
+│   ├── features       			<- Scripts to turn raw data into features for modeling
 │   │   └── build_features.py
 │   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
+│   ├── models         			<- Scripts to train models and then use trained models to make
+│   │   │                 		predictions
 │   │   ├── predict_model.py
 │   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   └── visualization  			<- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
 │
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+└── tox.ini            			<- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
 ## Contributing
